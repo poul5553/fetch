@@ -3,12 +3,12 @@
 // echo $_SERVER["DOCUMENT_ROOT"];
 // echo $_SERVER["DOCUMENT_ROOT"] . "/resources/incl/header.php";
 // var_dump ($_SERVER); 
-// phpinfo (); 
+// phpinfo ();  
 
 // sti til include 
 // $_SERVER["DOCUMENT_ROOT"] er serverdel
 // "/resources/incl/header.php" er det lokale
-include_once $_SERVER["DOCUMENT_ROOT"] . "/resources/incl/header.php"; 
+include_once $_SERVER["DOCUMENT_ROOT"] . "/public_html/resources/incl/header.php";
 ?> 
 
     <header class="head">
@@ -19,5 +19,5 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/resources/incl/header.php";
     </header>
 
 <?php
-include_once $_SERVER["DOCUMENT_ROOT"] . "/resources/incl/footer.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/public_html/resources/incl/footer.php";
 ?>
