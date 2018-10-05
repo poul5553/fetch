@@ -1,0 +1,30 @@
+// Colors 
+$color-primary-baby: #ddc3de; 
+$color-primary-girl: #c29999;
+$color-primary-boy: #99c2bf; 
+
+$color-secondary-baby: #9bb2ce ; 
+$color-secondary-girl: #c76e6e;
+$color-secondary-boy: #6ec7c1; 
+
+$color-back-baby: #f4d6dd;
+$color-back-girl: #ddc3de; 
+$color-back-boy: #dae6e5;
+
+$color-border-img: #fff; 
+$color-border-nav: #ffa500; 
+
+// color-back er kun synlig mellem afsnit på siden (margin)
+$color-back: #f0f0f0; 
+// color-fonts 
+$color-font-norm: #0f0f0f; 
+$color-font-head: #0f0f0f; 
+
+
+$nav-color-back: linear-gradient(0deg, $color-back-boy 0%, $color-back-boy 50%, $color-back-girl 50%, $color-back-girl 100%);
+$head-color-back: linear-gradient(0deg, #{$color-back-boy} 0%, #{$color-back-boy} 50%, #{$color-back-girl} 50%, #{$color-back-girl} 100%);
+$main-color-back: linear-gradient(-45deg, #{$color-back-boy} 0%, #{$color-back-boy} 50%, #{$color-back-girl} 50%, #{$color-back-girl} 100%);
+$footer-color-back: linear-gradient(0deg, #{$color-back-boy} 0%, #{$color-back-boy} 50%, #{$color-back-girl} 50%, #{$color-back-girl} 100%);
+
+// Bridge til variabler i mixins 
+$default-border-color: $color-border-img;

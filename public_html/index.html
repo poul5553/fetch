@@ -1,8 +1,3 @@
-<?php
-if (!isset($pageTitle)) {
-    $pageTitle = "Forside"; 
-}
-?>
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -10,7 +5,7 @@ if (!isset($pageTitle)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title><?php echo $pageTitle ?></title>
+    <title>PWA fetch</title>
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;subset=latin-ext" rel="stylesheet">
@@ -37,13 +32,25 @@ if (!isset($pageTitle)) {
     </section>
     </nav>
 
-     <h1><?php echo $pageTitle ?></h1>
+     <h1>PWA - Fetch song</h1>
 
-     <ul>
+     <!-- <ul>
         <li>
             <a href="index.php">Forside</a>
         </li>
         <li>
             <a href="contact.php">Kontakt os</a>
         </li>
-     </ul>
+     </ul> -->
+     <footer>
+        <p>
+            Footer
+        </p>
+    </footer>
+
+    <script src="./resources/js/app.js"></script>
+
+
+    
+</body>
+</html>

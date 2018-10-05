@@ -5,7 +5,7 @@
 self.addEventListener("install", function(e) {
     console.log("Service Worker Installed");
     e.waitUntil(
-        caches.open('my-new-progressive-web-app').then(function(cache) {
+        caches.open('PE fetch').then(function(cache) {
             return cache.addAll([
                 '/',
                 '/index.php',
@@ -30,7 +30,7 @@ self.addEventListener("activate", function(event) {
  */
 self.addEventListener("fetch", function(event) {
     event.respondWith(
-        caches.open('my-new-progressive-web-app').then(function(cache) {
+        caches.open('PE fetch').then(function(cache) {
             return cache.match(event.request).then(function(response) {
                 return response || fetch(event.request).then(function(response) {
                     cache.put(event.request, response.clone());

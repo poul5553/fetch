@@ -1,0 +1,109 @@
+@import 'base/fontsetup';
+@import 'base/colorsetup';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $color-font-norm;
+    font-family: $font-family-norm;
+    font-weight: $font-weight-norm;
+    $font-selector: 'norm'; 
+    font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+    background-color: $color-back; 
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h1 {
+    $font-selector: 'h1'; 
+    font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+    font-weight: $font-weight-norm; 
+     
+}
+h2 {
+    $font-selector: 'h2'; 
+    font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+    font-weight: $font-weight-norm; 
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+@import 'layouts/navigation'; 
+
+@import 'layouts/header'; 
+
+  $border-width: 2px;
+  $border-style: solid;
+  $border-radius: 50%;
+  $border-color: $color-border-nav;
+  $selector: 'nav-style'; 
+  
+  @if $selector==null {
+      .billed {
+          @include border-def ($border-width, $border-style, $border-radius, $border-color);
+          margin: 5vmin;
+      }
+  }
+  
+  @else {
+      @include border-def-sel ($selector, $border-width, $border-style, $border-radius, $border-color);
+  }
+
+.main-btn {
+  
+    cursor: pointer;
+  
+  }
+  
+  /* Style the active class (and buttons on mouse-over) */
+  .active {
+    background-color: inherit;
+   
+  }
+
+.main-wrapper {
+    width: 100vw;
+    background: $main-color-back; 
+    // margin: auto;
+    // @include mq-tablet ($tablet-width, $desktop-width) {
+    //     width: $tablet-width;
+    // }
+    // @include mq-desktop ($desktop-width) {
+    //     width: $desktop-width;
+    // }
+}
+// Definer grid 
+$selector: ".main-grid";
+$grid-fraction: 12;
+$grid-template-rows: null;
+$grid-column-gap: null;
+$grid-background-color: initial;
+@include grid-def-sel ($selector, $grid-fraction, $grid-template-rows, $grid-column-gap, $grid-background-color) {
+    // Place optinal content to grid 
+    // grid-template-columns: 1fr 30vw 20vw 1fr;
+}
+.main-item-img {
+    grid-column: span 12;
+    @include mq-tablet1 () {
+        grid-column: span 3;
+    }
+    padding-left: 2vmin; 
+}
+
+.main-item-cat {
+    grid-column: span 12;
+    @include mq-tablet1 () {
+        grid-column: span 7;
+    }
+    padding-left: 2vmin; 
+}
